@@ -97,8 +97,8 @@ void update_sound_allegro(void)
 	where_to_fill = 0;
 
 	// if dump asked, write in a file
-	if (dump_snd)
-	  fwrite (big_buf, 1, sbuf_size, out_snd);
+	/*if (dump_snd)
+	  fwrite (big_buf, 1, sbuf_size, out_snd);*/ // Pixbox modification, to allow compilation
 
 	while (!(p = get_audio_stream_buffer (PCM_stream)));
 
@@ -179,10 +179,10 @@ void sdl_fill_audio(void *data, Uint8 *stream, int len)
 
   SDL_UnlockAudio();
 	
-	if (dump_snd) // We also have to write data into a file
+	/*if (dump_snd) // We also have to write data into a file
 		{
 			dump_audio_chunck(stream, len);
-		}
+		}*/// Pixbox modification, to allow compilation
 	
 }
 

@@ -358,7 +358,7 @@ UInt32 timer_60 = 0;
 int UPeriod = 0;
 // Number of frame to skip
 
-static int BaseClock;
+/*static*/ int BaseClock; // Pixbox modification, to allow compilation
 
 UChar video_driver = 0;
 /* 0 => Normal driver, normal display

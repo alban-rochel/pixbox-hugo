@@ -246,8 +246,8 @@ int osd_gfx_init(void)
 		}
    	}
 
-  if ((physical_screen = SDL_SetVideoMode(option.want_fullscreen ? option.fullscreen_width : fake_io_screen_w * option.window_size,
-                                          option.want_fullscreen ? option.fullscreen_height : fake_io_screen_h * option.window_size,
+  if ((physical_screen = SDL_SetVideoMode(/*option.want_fullscreen ? option.fullscreen_width : fake_io_screen_w * option.window_size*/1280,// Pixbox modification, to allow full screen
+                                          /*option.want_fullscreen ? option.fullscreen_height : fake_io_screen_h * option.window_size*/720,// Pixbox modification, to allow full screen
                                           (option.want_hardware_scaling ? 0 : 8), (option.want_fullscreen ? SDL_FULLSCREEN : 0) |
                                           (option.want_hardware_scaling ? SDL_HWSURFACE : SDL_SWSURFACE) |
                                           (option.want_hardware_scaling ? 0 : SDL_HWPALETTE))) == NULL)
